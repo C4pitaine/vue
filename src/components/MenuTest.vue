@@ -1,9 +1,9 @@
 <template>
     <ul>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Réalisations</a></li>
-        <li><a href="#">Contact</a></li>
-        <li v-if="connected"><a href="#">Espace pro</a></li>
+        <li><router-link to="/">Services</router-link></li>
+        <li><router-link to="/realisations">Réalisations</router-link></li>
+        <li><router-link to="/contact">Contact</router-link></li>
+        <li v-if="connected"><router-link to="/espace-pro">Espace Pro</router-link></li>
     </ul>
 </template>
 

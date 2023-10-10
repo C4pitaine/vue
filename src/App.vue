@@ -1,6 +1,6 @@
 <template>
   <MenuTest :connected="connected"/>
-  <ServicePage></ServicePage>
+  <router-view></router-view>
   <!--<img alt="Vue logo" src="./assets/logo.png">-->
   <!--<HelloWorld msg="Welcome to Your Vue.js App" name="Alexandre"/>-->
 </template>
@@ -8,14 +8,12 @@
 <script>
 // import HelloWorld from './components/HelloWorld.vue'
 import MenuTest from './components/MenuTest.vue'
-import ServicePage from './pages/ServicePage.vue'
 
 export default {
   name: 'App',
   components: {
     // HelloWorld,
-    MenuTest,
-    ServicePage
+    MenuTest
   },
   data(){
     return {
