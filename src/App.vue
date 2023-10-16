@@ -1,26 +1,21 @@
 <template>
-  <MenuTest :connected="connected"/>
+  <MenuNav></MenuNav>
   <router-view></router-view>
-  <!--<img alt="Vue logo" src="./assets/logo.png">-->
-  <!--<HelloWorld msg="Welcome to Your Vue.js App" name="Alexandre"/>-->
 </template>
 
 <script>
-// import HelloWorld from './components/HelloWorld.vue'
-import MenuTest from './components/MenuTest.vue'
+import MenuNav from './components/MenuNav.vue'
 
 export default {
   name: 'App',
   components: {
-    // HelloWorld,
-    MenuTest
+    MenuNav
   },
-  data(){
+  data() {
     return {
-      connected : true
+      
     }
   }
-
 }
 </script>
 
@@ -34,11 +29,7 @@ export default {
   margin-top: 60px;
 }
 
-ul{
-  li{
-    a{
-      color: black;
-    }
-  }
+ul li a{
+  color: black;
 }
 </style>

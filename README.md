@@ -1,5 +1,10 @@
 # epse
 
+## NodeJs version
+```
+v18.18.0
+```
+
 ## Project setup
 ```
 npm install
