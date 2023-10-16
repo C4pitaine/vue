@@ -1,26 +1,34 @@
 <script>
 import ConnectTop from './ConnectTop.vue'
+import LogoBusiness from './LogoBusiness.vue'
 
 export default {
   name: 'MenuNav',
+  props: {
+    connected: Boolean,
+    changeConnect: Function
+  },
   data(){
     return {
-      connected: false
+
+      businessName: "EPSE"
     }
   },
   methods: {
-    changeConnect(state){
-      this.connected = state
+    changeBusinessName(){
+      this.businessName += "E"
     }
   },
   components: {
-    ConnectTop
-  }
+    ConnectTop,
+    LogoBusiness
+}
 }
 </script>
 
 <template>
   <ul>
+    <li><LogoBusiness :changeName="changeBusinessName" :business="businessName"></LogoBusiness></li>
     <li><router-link to="/">Services</router-link></li>
     <li><router-link to="/realisations">Réalisations</router-link></li>
     <li><router-link to="/contact">Contact</router-link></li>

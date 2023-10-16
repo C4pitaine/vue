@@ -1,5 +1,5 @@
 <template>
-  <MenuNav></MenuNav>
+  <MenuNav :connected="connexion" :changeConnect="actionConnect"></MenuNav>
   <router-view></router-view>
 </template>
 
@@ -13,7 +13,12 @@ export default {
   },
   data() {
     return {
-      
+      connexion:false
+    }
+  },
+  methods: {
+    actionConnect(state){
+      this.connexion = state
     }
   }
 }
